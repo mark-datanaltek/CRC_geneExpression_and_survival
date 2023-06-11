@@ -1,4 +1,4 @@
-,ID_REF,Age (in years),Dukes Stage,Gender,Location,DFS (in months),DFS event,Adj_Radio,Adj_Chem
+rownum,ID_REF,Age (in years),Dukes Stage,Gender,Location,DFS (in months),DFS event,Adj_Radio,Adj_Chem
 0,GSM877126,62.0,A,Male,Left,108.0,0.0,1.0,0.0
 1,GSM877127,77.0,B,Male,Left,40.0,1.0,1.0,0.0
 2,GSM877128,66.0,C,Female,Left,49.0,0.0,1.0,0.0
