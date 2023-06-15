@@ -20,8 +20,8 @@ Gene Expression Data for 1935 genes
     * probably best to do this with R/Bioconductor
 
 # Analysis Plan
-Start with EDA of patient metadata fields vs DFS and create some Kaplan-Meier curves.
-* can also compute some Cox Proportional Hazards (CPH) analysis for patient metadata fields to determine if there are significant effects
+Start with EDA of patient metadata fields vs DFS and create some Kaplan-Meier curves. - <font color="green">*DONE*</font>
+* can also compute some Cox Proportional Hazards (CPH) analysis for patient metadata fields to determine if there are significant effects - <font color="green">*DONE*</font>
 
 Then look for individual genes whose expression levels regress well with DFS and are not highly correlated with each other. 
 * this is likely also done with CPH, e.g. see https://www.biostars.org/p/344233/
@@ -30,3 +30,29 @@ Then look for individual genes whose expression levels regress well with DFS and
 Then look for sets of genes that ML can use to predict DFS
 * as a start, to limit risk of overfitting we should try to limit the genes for modeling to <=50 genes
 * later we can consider using more genes in a more robust modeling approach like RF or DL
+
+# Summary 
+Dug into this a bit including annotating "probesets" to transcripts and genes.  Find that this affy microarray has many-to-many relationships between probesets and transcripts, which makes analysis of differential expression of transcripts challenging from this probeset data.
+
+I emailed 
+Prof. Dr. Márcio Dorn
+Federal University of Rio Grande do Sul, Institute of Informatics, Center for Biotechnology
+Structural Bioinformatics and Computational Biology Lab - SBCB - http://sbcb.inf.ufrgs.br
+Av. Bento Gonçalves 9500
+91501-970 - Porto Alegre, RS - Brasil
+Prédio 72  Sala 217
+Tel: +55 51 3308-6824
+Lattes CV: http://lattes.cnpq.br/6355224981962273
+mdorn@inf.ufrgs.br
+
+about the data set and he kindly pointed out that his group has also posted some curated RNA-Seq data here:
+https://sbcb.inf.ufrgs.br/barracurda
+
+The RNA-Seq data provide direct access to gene-sample normalized and transformed (to remove heteroskedacity) counts.  See full description in 
+Benchmarking and Testing Machine Learning
+Approaches with BARRA:CuRDa, a Curated RNA-Seq Database for Cancer Research
+BRUNO CE ́ SAR FELTES,1,2 JOICE DE FARIA POLONI,1,3 and MA ́ RCIO DORN1,4,5,i
+JOURNAL OF COMPUTATIONAL BIOLOGY
+Volume 28, Number 9, 2021
+Pp. 931–944
+DOI: 10.1089/cmb.2020.0463

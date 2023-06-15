@@ -61,4 +61,3 @@ rownum,ID_REF,Age (in years),Dukes Stage,Gender,Location,DFS (in months),DFS eve
 59,GSM877186,65.0,C,Male,Left,25.0,1.0,1.0,0.0
 60,GSM877187,71.0,A,Male,Rectum,58.0,1.0,1.0,0.0
 61,GSM877188,57.0,A,Male,Rectum,68.0,1.0,0.0,0.0
-62,,,,,,,,,
